@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap');
+
+body {
+  width: 300px;
+  padding: 20px;
+  margin: 0;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: rgba(41, 98, 255, 0.1);
+  color: #2962ff;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(41, 98, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(41, 98, 255, 0.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(41, 98, 255, 0.1);
+}
+
+h1 {
+  font-size: 1.4em;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  color: #2962ff;
+  letter-spacing: 0.02em;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(41, 98, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.95em;
+  color: #2962ff;
+}
+
+input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid rgba(41, 98, 255, 0.2);
+  border-radius: 12px;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95em;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #2962ff;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(41, 98, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(41, 98, 255, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: rgba(41, 98, 255, 0.1);
+  border: 1px solid rgba(41, 98, 255, 0.2);
+  border-radius: 12px;
+  color: #2962ff;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+button:hover {
+  background: rgba(41, 98, 255, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(41, 98, 255, 0.1);
+  border-color: rgba(41, 98, 255, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#saveConfirmation {
+  text-align: center;
+  color: #28a745;
+  font-size: 14px;
+  transition: opacity 0.3s;
+  background: rgba(40, 167, 69, 0.1);
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(40, 167, 69, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.status {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  text-align: center;
+  background: rgba(41, 98, 255, 0.1);
+  border: 1px solid rgba(41, 98, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Add a subtle gradient background to the popup */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(41, 98, 255, 0.1),
+    rgba(41, 98, 255, 0.05)
+  );
+  z-index: -1;
+  border-radius: 16px;
+} 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WorkTime Price Tag</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>WorkTime Price Tag</h1>
+    <div class="form-group">
+      <label for="hourlyWage">Hourly Wage ($)</label>
+      <input type="number" id="hourlyWage" min="0" step="0.01" placeholder="Enter your hourly wage">
+    </div>
+    <div class="form-group">
+      <label for="hoursPerDay">Hours Worked Per Day</label>
+      <input type="number" id="hoursPerDay" min="1" max="24" step="0.5" placeholder="Enter hours per day">
+    </div>
+    <button id="saveButton">Save wage</button>
+    <div id="saveConfirmation" class="hidden">Wage saved!</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
