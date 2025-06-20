@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap');
-
 body {
   width: 300px;
   padding: 20px;
   margin: 0;
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background: rgba(41, 98, 255, 0.1);
   color: #2962ff;
   border-radius: 16px;
@@ -57,7 +55,7 @@ input {
   padding: 8px 12px;
   border: 1px solid rgba(41, 98, 255, 0.2);
   border-radius: 12px;
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: 0.95em;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(8px);
@@ -81,7 +79,7 @@ button {
   border: 1px solid rgba(41, 98, 255, 0.2);
   border-radius: 12px;
   color: #2962ff;
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: 0.95em;
   font-weight: 600;
   cursor: pointer;

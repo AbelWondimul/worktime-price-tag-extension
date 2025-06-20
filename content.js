@@ -55,7 +55,7 @@ function createWorkTimeOverlay(workTime) {
     return null;
   }
   
-  overlay.innerHTML = displayText;
+  overlay.textContent = displayText;
   return overlay;
 }
 
@@ -135,14 +135,16 @@ function processTextNode(node, hourlyWage, hoursPerDay) {
     const text = node.textContent;
     let match;
     let lastIndex = 0;
-    let newContent = '';
+    const fragment = document.createDocumentFragment();
 
     // Reset regex
     PRICE_REGEX.lastIndex = 0;
 
     while ((match = PRICE_REGEX.exec(text)) !== null) {
       // Add text before the price
-      newContent += text.slice(lastIndex, match.index);
+      if (match.index > lastIndex) {
+        fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+      }
       
       // Get the price value
       const price = parseFloat(match[1].replace(/,/g, ''));
@@ -161,24 +163,20 @@ function processTextNode(node, hourlyWage, hoursPerDay) {
       }
       
       // Add the price span to new content
-      newContent += priceSpan.outerHTML;
+      fragment.appendChild(priceSpan);
       
       lastIndex = match.index + match[0].length;
     }
 
     // Add remaining text
-    newContent += text.slice(lastIndex);
+    if (lastIndex < text.length) {
+      fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+    }
 
     // Only update if we found prices
-    if (lastIndex > 0) {
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = newContent;
-      
-      // Replace the text node with the new content
-      if (node.parentNode) {
-        node.parentNode.replaceChild(tempDiv.firstChild, node);
-        safeAddToProcessed(node.parentElement);
-      }
+    if (fragment.childNodes.length > 0) {
+      node.parentNode.replaceChild(fragment, node);
+      safeAddToProcessed(node.parentElement);
     }
   } catch (error) {
     console.log('Error processing text node:', error);

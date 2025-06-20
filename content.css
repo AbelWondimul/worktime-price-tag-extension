@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap');
-
 .worktime-price-tag {
   display: inline-flex;
   align-items: center;
@@ -9,7 +7,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: 0.95em;
   font-weight: 600;
   color: #2962ff;
@@ -71,4 +69,4 @@
 
 .worktime-price-tag:hover::after {
   left: 100%;
-} 
+}
