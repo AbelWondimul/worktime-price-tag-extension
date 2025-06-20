@@ -5,7 +5,6 @@
   "description": "Shows how many hours/days of work an item costs based on your wage",
   "permissions": [
     "storage",
-    "scripting",
     "activeTab"
   ],
   "host_permissions": [
